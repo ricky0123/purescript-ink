@@ -1,0 +1,24 @@
+{
+  "name": "purescript-ink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "spago build",
+    "start": "npm run build && node index.js",
+    "format": "purs-tidy format-in-place \"src/**/*.purs\" \"test/**/*.purs\" \"examples/**/*.purs\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^19.2.7",
+    "ink": "^6.5.1",
+    "react": "^19.2.0"
+  },
+  "devDependencies": {
+    "fullscreen-ink": "^0.1.0",
+    "purs-tidy": "^0.11.1"
+  }
+}
