@@ -6,6 +6,7 @@ module Ink
   , useInput
   , useApp
   , useFocus
+  , useStdout
   , text
   , box
   , Key
@@ -18,6 +19,7 @@ module Ink
   , UseInput
   , UseApp
   , UseFocus
+  , UseStdout
   ) where
 
 import Prelude
@@ -26,6 +28,7 @@ import Data.Array as Array
 import Data.Maybe (Maybe)
 import Effect (Effect)
 import Internal.ForeignUtils (toUndefined)
+import Node.Stream (Writable)
 import Props.Box (BoxPropRecord, BoxPropsComplete, defaultBoxProps, mapBoxProps)
 import Props.Setters
   ( backgroundColor
@@ -61,8 +64,11 @@ useInput isActive handler = unsafeHook (useInputImpl isActive handler)
 useApp :: Hook (UseApp Unit) { exit :: Effect Unit }
 useApp = unsafeHook useAppImpl
 
-useFocus :: Hook (UseFocus Unit) { isFocused :: Boolean }
-useFocus = unsafeHook useFocusImpl
+useFocus :: Boolean -> Hook (UseFocus Unit) { isFocused :: Boolean }
+useFocus autoFocus = unsafeHook (useFocusImpl autoFocus)
+
+useStdout :: Hook (UseStdout Unit) { stdout :: Writable () }
+useStdout = unsafeHook useStdoutImpl
 
 text :: Array (TextPropRecord Maybe -> TextPropRecord Maybe) -> String -> JSX
 text opts children = element textComponent props
@@ -90,7 +96,10 @@ foreign import data UseApp :: Type -> Type -> Type
 foreign import useAppImpl :: Effect { exit :: Effect Unit }
 
 foreign import data UseFocus :: Type -> Type -> Type
-foreign import useFocusImpl :: Effect { isFocused :: Boolean }
+foreign import useFocusImpl :: Boolean -> Effect { isFocused :: Boolean }
+
+foreign import data UseStdout :: Type -> Type -> Type
+foreign import useStdoutImpl :: Effect { stdout :: Writable () }
 
 foreign import textRaw :: String -> JSX
 foreign import textComponent :: ReactComponent TextPropsComplete

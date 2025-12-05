@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, Text, Box, useInput, useApp, useFocus } from 'ink';
+import { render, Text, Box, useInput, useApp, useFocus, useStdout } from 'ink';
 
 export const renderImpl = element => () => render(element)
 export const useAppImpl = useApp
-export const useFocusImpl = useFocus
+export const useFocusImpl = autoFocus => () => useFocus({ autoFocus })
+export const useStdoutImpl = useStdout
 
 export const textComponent = Text;
 export const boxComponent = Box;
