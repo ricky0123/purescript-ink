@@ -9,6 +9,9 @@
               "arrays": "*"
             },
             {
+              "console": "*"
+            },
+            {
               "effect": "*"
             },
             {
