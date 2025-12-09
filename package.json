@@ -7,7 +7,9 @@
   "scripts": {
     "build": "spago build",
     "start": "npm run build && node index.js",
-    "format": "purs-tidy format-in-place \"src/**/*.purs\" \"test/**/*.purs\" \"examples/**/*.purs\""
+    "format": "purs-tidy format-in-place \"src/**/*.purs\" \"test/**/*.purs\" \"examples/**/*.purs\"",
+    "run-menu-example": "cd examples/menu && npx spago build && node index.js",
+    "run-fullscreen-example": "cd examples/fullscreen && npx spago build && node index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +17,10 @@
   "dependencies": {
     "@types/react": "^19.2.7",
     "ink": "^6.5.1",
-    "react": "^19.2.0"
+    "react": "^19.2.0",
+    "spago": "^0.93.44"
   },
   "devDependencies": {
-    "fullscreen-ink": "^0.1.0",
     "purs-tidy": "^0.11.1"
   }
 }

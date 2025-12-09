@@ -1,0 +1,17 @@
+package:
+  dependencies:
+  - arrays
+  - console
+  - effect
+  - maybe
+  - node-streams
+  - prelude
+  - react-basic
+  - react-basic-hooks
+  - record
+  - unsafe-coerce
+  name: my-project
+workspace:
+  extra_packages: {}
+  package_set:
+    url: https://raw.githubusercontent.com/purescript/package-sets/psc-0.15.15-20251119/packages.json

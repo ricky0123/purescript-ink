@@ -1,0 +1,16 @@
+package:
+  name: fullscreen
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - ink
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 68.5.0
+  extraPackages:
+    ink:
+      path: ../..
