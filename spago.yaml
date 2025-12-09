@@ -11,6 +11,12 @@ package:
     - record: "*"
     - unsafe-coerce: "*"
   name: ink
+  publish:
+    version: 0.0.1
+    license: BSD-3-Clause
+    location:
+      githubOwner: ricky0123
+      githubRepo: purescript-ink
 workspace:
   extraPackages: {}
   packageSet:
