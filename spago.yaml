@@ -1,7 +1,6 @@
 package:
   dependencies:
     - arrays: "*"
-    - console: "*"
     - effect: "*"
     - maybe: "*"
     - node-streams: "*"
@@ -11,6 +10,10 @@ package:
     - record: "*"
     - unsafe-coerce: "*"
   name: ink
+  test:
+    main: Test.Main
+    dependencies:
+      - console
   publish:
     version: 0.0.1
     license: BSD-3-Clause

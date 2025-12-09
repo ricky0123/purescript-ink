@@ -9,9 +9,6 @@
               "arrays": "*"
             },
             {
-              "console": "*"
-            },
-            {
               "effect": "*"
             },
             {
@@ -103,8 +100,14 @@
           ]
         },
         "test": {
-          "dependencies": [],
-          "build_plan": []
+          "dependencies": [
+            "console"
+          ],
+          "build_plan": [
+            "console",
+            "effect",
+            "prelude"
+          ]
         }
       }
     },
