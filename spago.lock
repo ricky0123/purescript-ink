@@ -5,33 +5,15 @@
         "path": "./",
         "core": {
           "dependencies": [
-            {
-              "arrays": "*"
-            },
-            {
-              "effect": "*"
-            },
-            {
-              "maybe": "*"
-            },
-            {
-              "node-streams": "*"
-            },
-            {
-              "prelude": "*"
-            },
-            {
-              "react-basic": "*"
-            },
-            {
-              "react-basic-hooks": "*"
-            },
-            {
-              "record": "*"
-            },
-            {
-              "unsafe-coerce": "*"
-            }
+            "arrays",
+            "effect",
+            "maybe",
+            "node-streams",
+            "prelude",
+            "react-basic",
+            "react-basic-hooks",
+            "record",
+            "unsafe-coerce"
           ],
           "build_plan": [
             "aff",
