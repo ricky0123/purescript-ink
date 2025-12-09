@@ -1,20 +1,37 @@
 {
   "workspace": {
     "packages": {
-      "my-project": {
+      "ink": {
         "path": "./",
         "core": {
           "dependencies": [
-            "arrays",
-            "console",
-            "effect",
-            "maybe",
-            "node-streams",
-            "prelude",
-            "react-basic",
-            "react-basic-hooks",
-            "record",
-            "unsafe-coerce"
+            {
+              "arrays": "*"
+            },
+            {
+              "effect": "*"
+            },
+            {
+              "maybe": "*"
+            },
+            {
+              "node-streams": "*"
+            },
+            {
+              "prelude": "*"
+            },
+            {
+              "react-basic": "*"
+            },
+            {
+              "react-basic-hooks": "*"
+            },
+            {
+              "record": "*"
+            },
+            {
+              "unsafe-coerce": "*"
+            }
           ],
           "build_plan": [
             "aff",

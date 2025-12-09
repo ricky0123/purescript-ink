@@ -10,7 +10,7 @@ package:
     - react-basic-hooks: "*"
     - record: "*"
     - unsafe-coerce: "*"
-  name: my-project
+  name: ink
 workspace:
   extraPackages: {}
   packageSet:
